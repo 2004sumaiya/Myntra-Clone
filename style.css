@@ -1,0 +1,332 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.nav-links ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav-links ul li {
+  margin: 0 15px;
+}
+
+.nav-links ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.nav-links ul li a:hover {
+  color: #ff3f6c;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex: 1;
+  margin: 0 20px;
+  max-width: 500px;
+}
+
+.search-bar input {
+  padding: 10px 40px 10px 35px; /* Padding for space around the search icon */
+  border: none;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  width: 100%;
+  font-size: 14px;
+  outline: none;
+}
+
+.search-bar input::placeholder {
+  color: #aaa;
+}
+
+/* Style for the search icon */
+.search-bar .search-icon {
+  position: absolute;
+  left: 10px; /* Position icon to the left */
+  color: rgb(161, 152, 152);
+  font-size: 17px;
+}
+
+.nav-icons {
+  display: flex;
+  align-items: center;
+}
+
+.nav-icons .icon {
+  margin-left: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.nav-icons .icon img {
+  height: 25px;
+}
+
+.nav-icons .icon p {
+  font-size: 15px;
+  margin-top: 5px;
+  color: #333;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      padding: 10px;
+  }
+
+  .nav-links ul {
+      flex-direction: column;
+      text-align: center;
+      margin-bottom: 10px;
+  }
+
+  .nav-links ul li {
+      margin: 10px 0;
+  }
+
+  .search-bar {
+      width: 100%;
+      margin: 10px 0;
+  }
+
+  .search-bar input {
+      font-size: 12px;
+      padding: 10px 35px;
+  }
+
+  .nav-icons {
+      justify-content: center;
+      margin-top: 10px;
+  }
+
+  .nav-icons .icon {
+      margin: 0 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar {
+      flex-direction: column;
+      padding: 5px;
+  }
+
+  .nav-links ul {
+      flex-direction: column;
+      text-align: center;
+      margin-bottom: 5px;
+  }
+
+  .nav-links ul li {
+      margin: 5px 0;
+  }
+
+  .search-bar {
+      width: 100%;
+      margin: 5px 0;
+  }
+
+  .search-bar input {
+      font-size: 12px;
+      padding: 8px 30px;
+  }
+
+ 
+
+  .nav-icons .icon {
+      margin: 0 5px;
+  }
+
+  .logo img {
+      height: 30px;
+  }
+}
+
+
+/* Main content style */
+
+.items-container{
+width: 80%;
+margin: 40px 10%;
+/* margin-left: 10%;
+margin-top: 40px; */
+display: flex;
+flex-wrap: wrap;
+justify-content: space-evenly;
+}
+
+.item-container{
+width: 200px;
+margin:20px ;
+}
+.item-image{
+/* we are telling image that aap apne hisaab se width mat lo aapke parent container k hisab se lo means parent container ki 100% lo when u do this image thodi choti hongi :)*/
+width: 100%;
+/* width: 315;
+height: 420; */
+
+}
+.rating{
+
+/* copy styleing from myntra more tools->developer tools */
+font-size: 14px;
+font-weight: 700;
+
+
+}
+
+.company-name{
+font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  color: #282c3f;
+  margin-bottom: 6px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: 15px;
+
+}
+.item-name{
+color: #535766;
+  font-size: 14px;
+  line-height: 1;
+  margin-bottom: 0;
+  margin-top: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 400;
+  display: block;
+
+}
+.price{
+font-size: 14px;
+  line-height: 15px;
+  color: #282c3f;
+  white-space: nowrap;
+  margin-top: 10px;
+
+}
+.current-price{
+font-size: 14px;
+  font-weight: 700;
+  color: #282c3f;
+
+}
+.original-price{
+text-decoration: line-through;
+  color: #7e818c;
+  font-weight: 400;
+  margin-left: 5px;
+  font-size: 12px;
+
+}
+.discount{
+color: #ff905a;
+  font-weight: 400;
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+
+.btn-add-bag{
+/* Parent ki puri width lo :) */
+  width: 100%;
+  height: 40px;
+  background-color: rgb(162, 195, 112);
+  border-radius: 14px;
+  border: none;
+  margin-top: 8px;
+  font-size: 18px;
+  padding: 3px 0;
+  cursor: pointer;
+
+
+}
+
+.bag-item-count{
+  background-color: rgb(183, 30, 30);
+  color: white;
+  white-space:nowrap ;
+  text-align: center;
+  line-height: 18px;
+  padding: 0 6px;
+  height: 18px;
+  /* position: relative; */
+  border-radius: 100%;
+  font-size: 12px;
+  /* left: 13px;
+  top: -40px; */
+  font-weight: 700;
+  cursor: pointer;
+
+  position: absolute; /* Changed from relative to absolute */
+  top: 0; /* Adjusted the top value */
+  right: 0; /* Align to the top-right corner of the bag icon */
+  transform: translate(50%, -50%); /* Fine-tuned the position */
+
+
+}
+
+
+/* Footer style */
+.footer_container {
+  padding: 30px 0px 40px 0px;
+  background: #FAFBFC;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer_column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer_column h3 {
+  color: #282c3f;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.footer_column a {
+  color: #696b79;
+  font-size: 15px;
+  text-decoration: none;
+  padding-bottom: 5px;
+}
+
+.copyright {
+  color: #94969f;
+  text-align: center;
+  padding: 15px;
+}
